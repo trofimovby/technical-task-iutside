@@ -1,0 +1,9 @@
+# Development
+/.vs
+/.idea
+
+# MacOS
+/**/.DS_Store
+
+# Dependencies
+/node_modules

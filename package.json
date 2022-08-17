@@ -1,0 +1,15 @@
+{
+  "name": "technical-task-outside",
+  "version": "0.1.0",
+  "description": "Technical task to outside digital",
+  "author": {
+    "name": "Alexander Trofimov",
+    "email": "ftreder79@gmail.com"
+  },
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "main": "index.js",
+  "scripts":{
+    "start": "node index.js"
+  }
+}
