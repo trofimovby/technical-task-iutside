@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import Database from './Database.js';
 
 import setPassportJwtStrategy from './middlewares/setPassportJwtStrategy.js';
+import AuthRouter from "./routers/auth.js";
 
 
 export default class App {
@@ -22,6 +23,8 @@ export default class App {
             .use(passport.initialize());
 
         this.database = new Database(config.database);
+
+        (new AuthRouter(this.express, config.jwt));
     }
 
     start() {
