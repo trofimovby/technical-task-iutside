@@ -17,6 +17,8 @@ DB_PASSWORD=<string>
 DB_HOST=<string> // devDefault: 'localhost'
 DB_PORT=<number> // default: 5432
 DB_NAME=<string> // default: 'outside'
+JWT_SECRET_OR_KEY=<string>
+JWT_EXPIRATION_TIME=<string> // default: '30m'
 ```
 
 ###### Example
@@ -30,4 +32,6 @@ DB_PASSWORD="postgres"
 DB_HOST="localhost"
 DB_PORT=5432
 DB_NAME="outside"
+JWT_SECRET_OR_KEY="41F0e5F8E5E51336cF31A147A53fa5A869f5b16b"
+JWT_EXPIRATION_TIME="30m"
 ```
