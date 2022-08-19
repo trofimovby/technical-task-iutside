@@ -6,6 +6,10 @@ import App from './App/index.js';
 
 const env = cleanEnv(process.env, {
     PORT: port(),
+    MORGAN_FORMAT: str({
+        devDefault: 'dev',
+        default: 'common'
+    }),
     DB_USERNAME: str({
         default: 'postgres'
     }),
@@ -24,6 +28,7 @@ const env = cleanEnv(process.env, {
 
 const app = new App({
     port: env.PORT,
+    morganFormat: env.MORGAN_FORMAT,
     database: {
         username: env.DB_USERNAME,
         password: env.DB_PASSWORD,
