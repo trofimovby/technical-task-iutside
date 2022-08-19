@@ -1,4 +1,10 @@
 import {DataSource} from 'typeorm';
+
+import {User} from './models/User.js';
+import {Tag} from './models/Tag.js';
+import {UserTag} from './models/UserTag.js';
+
+
 export default class Database {
     constructor(config) {
         this.dataSource = new DataSource({
@@ -10,7 +16,7 @@ export default class Database {
             database: config.name,
             synchronize: true,
             logging: true,
-            entities: [],
+            entities: [User, Tag, UserTag],
             subscribers: [],
             migrations: [],
         });
